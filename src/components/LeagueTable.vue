@@ -57,6 +57,7 @@ import { computed } from 'vue'
 import { useLeagueStore } from '@/stores/league'
 
 const leagueStore = useLeagueStore()
+
 const sortedTeams = computed(() => {
   return [...leagueStore.teams].sort((a, b) => {
     if (b.points !== a.points) return b.points - a.points
